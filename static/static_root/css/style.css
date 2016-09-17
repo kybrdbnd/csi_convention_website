@@ -1,0 +1,125 @@
+/*base page*/
+
+.waves-effect.waves-blue .waves-ripple {
+    /* The alpha value allows the text and background color
+     of the button to still show through. */
+    background-color: rgb(48, 190, 210);
+}
+
+nav ul a,
+nav .brand-logo {
+    color: #444;
+}
+
+p {
+    line-height: 2rem;
+}
+
+.button-collapse {
+    color: #003399;
+}
+
+.parallax-container {
+    min-height: 480px;
+    line-height: 0;
+    height: auto;
+    color: rgba(255, 255, 255, .9);
+}
+
+.parallax-container .section {
+    width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+    .parallax-container .section {
+        position: absolute;
+        top: 10%;
+    }
+    .parallax-container {
+        min-height: 800px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .parallax-container .section {
+        position: absolute;
+        top: 10%;
+    }
+    #index-banner .section {
+        top: 0;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .parallax-container {
+        min-height: 510px;
+    }
+    .parallax-container .section {
+        position: absolute;
+        top: 10%;
+    }
+    .parallax-container .section .about {
+        position: absolute;
+        top: 10%;
+    }
+    #index-banner .section {
+        top: 0;
+    }
+}
+
+.icon-block {
+    padding: 0 15px;
+}
+
+.icon-block .material-icons {
+    font-size: inherit;
+}
+
+footer.page-footer {
+    margin: 0;
+}
+
+
+/*contact form*/
+
+.input-field label {
+    color: #000;
+}
+
+
+/* label focus color */
+
+.input-field input[type=text]:focus + label {
+    color: purple;
+}
+
+
+/* label underline focus color */
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid purple;
+    box-shadow: 0 1px 0 0 purple;
+}
+
+
+/* valid color */
+
+.input-field input[type=text].valid {
+    border-bottom: 1px solid purple;
+    box-shadow: 0 1px 0 0 purple;
+}
+
+
+/* invalid color */
+
+.input-field input[type=text].invalid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 #000;
+}
+
+
+/* icon prefix focus color */
+
+.input-field .prefix.active {
+    color: purple;
+}
