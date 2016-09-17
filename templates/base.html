@@ -1,0 +1,78 @@
+{% load staticfiles %}
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    {% include 'css.html' %}
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper  white">
+                <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="#home" class="waves-effect waves-light waves-blue">
+                            <i class="material-icons left">home</i>Home</a>
+                    </li>
+                    <li>
+                        <a href="#event" class="waves-effect waves-light waves-blue">
+                            <i class="material-icons left">android</i>Event</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="waves-effect waves-light waves-blue">
+                            <i class="material-icons left">account_box</i>About</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="waves-effect waves-light waves-blue">
+                            <i class="material-icons left">perm_device_information</i>Contact</a>
+                    </li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav">
+                    <li>
+                        <a href="#home" class="waves-effect waves-light waves-blue">
+                            <i class="material-icons">home</i>Home</a>
+                    </li>
+                    <li>
+                        <a href="#event" class="waves-effect waves-light waves-blue">
+                            <i class="material-icons">android</i>Events</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="waves-effect waves-light waves-blue">
+                            <i class="material-icons">supervisor_account</i>About Us</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="waves-effect waves-light waves-blue">
+                            <i class="material-icons">perm_device_information</i>Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    {% block content %} {% endblock %}
+    <footer class="page-footer blue darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h5 class="white-text">CSI Student Chapter SRM University</h5>
+                    <p class="grey-text text-lighten-4">We are a team of college students which helps the students of SRM University to gain technical knowledge. We regularly conduct special classes on C, C++ and Python, which help students to gain information out of the books. We also organize various online events like hackathon, quiz on data structure etc.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="white-text text-lighten-3" href="http://materializecss.com">Materialize</a> & Powered By
+                <a class="white-text text-lighten-3" href="http://djangoproject.com">Django</a>
+            </div>
+        </div>
+    </footer>
+    <!--Import jQuery before materialize.js-->
+    {% include 'js.html' %}
+</body>
+
+</html>
