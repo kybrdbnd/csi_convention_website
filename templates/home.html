@@ -2,6 +2,14 @@
 <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
         <div class="container">
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>
+                    <h3>{{ message }}</h3></li>
+                    {% endfor %}
+            </ul>
+            {% endif %}
             <div id="home" class="section scrollspy"></div>
             <br>
             <br>
@@ -23,147 +31,166 @@
 <div class="container">
     <div class="section">
         <h1 class="header center blue-text text-darken-4">Events</h1>
-        <!--   Icon Section   -->
         <div class="row">
-            <div class="col s12 m6">
+            <h4 class="center">Flag Events</h4>
+            <div class="col s12 m4">
                 <div class="icon-block">
-                    <h2 class="center deep-purple-text"><i class="material-icons">assignment</i></h2>
-                    <h5 class="center">Technical Events</h5>
-                    <p class="light">We have 4 technical events in our convention which focuses on creativity and design patterns and algorthm.</p>
-                    <a class="btn-large waves-effect waves-light blue darken-4 modal-trigger" href="#technical">
-                        <i class="material-icons right">check_circle</i>View Events</a>
+                    <h2 class="deep-purple-text center"><i class="material-icons">assignment</i></h2>
+                    <h5 class="center">Paper Presentation</h5>
+                    <p class="light">We have 4 technical events in our convention which focuses on creativity and design patterns and algorthm.
+                        <br>
+                        <a class="modal-trigger" href="#paper_presentation">View More...</a>
+                    </p>
+                    <a class="btn-large waves-effect waves-light blue darken-4">
+                        <i class="material-icons right">check_circle</i>Register Now</a>
                 </div>
             </div>
-            <div class="col s12 m6">
+            <div class="col s12 m4">
                 <div class="icon-block">
                     <h2 class="center deep-purple-text"><i class="material-icons">web</i></h2>
-                    <h5 class="center">Fun Events</h5>
-                    <p class="light">We have 3 fun events in our convention which are full of fun and enjoyment</p>
-                    <a class="btn-large waves-effect waves-light blue darken-4 modal-trigger" href="#fun">
-                        <i class="material-icons right">check_circle</i>View Events</a>
+                    <h5 class="center">Hackathon</h5>
+                    <p class="light">We have 4 technical events in our convention which focuses on creativity and design patterns and algorthm.
+                        <br>
+                        <a class="modal-trigger" href="#hackathon">View More...</a>
+                    </p>
+                    <a class="btn-large waves-effect waves-light blue darken-4">
+                        <i class="material-icons right">check_circle</i>Register Now</a>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <h2 class="center deep-purple-text"><i class="material-icons">android</i></h2>
+                    <h5 class="center">Game of Codes</h5>
+                    <p class="light">We have 4 technical events in our convention which focuses on creativity and design patterns and algorthm.
+                        <br>
+                        <a class="modal-trigger" href="#game_of_codes">View More...</a>
+                    </p>
+                    <a class="btn-large waves-effect waves-light blue darken-4">
+                        <i class="material-icons right">check_circle</i>Register Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <br>
+            <h4 class="center">Other Events</h4>
+            <div class="col m4 s12">
+                <div class="icon-block">
+                    <h2 class="center deep-purple-text"><i class="material-icons">donut_large</i></h2>
+                    <h5 class="center">Blind Coding</h5>
+                    <p class="light">We have 4 technical events in our convention which focuses on creativity and design patterns and algorthm.
+                        <br>
+                        <a class="modal-trigger" href="#blind_coding">View More...</a>
+                    </p>
+                    <a class="btn-large waves-effect waves-light blue darken-4">
+                        <i class="material-icons right">check_circle</i>Register Now</a>
+                </div>
+            </div>
+            <div class="col m4 s12">
+                <div class="icon-block">
+                    <h2 class="center deep-purple-text"><i class="material-icons">closed_caption</i></h2>
+                    <h5 class="center">Photo Flexer</h5>
+                    <p class="light">We have 4 technical events in our convention which focuses on creativity and design patterns and algorthm.
+                        <br>
+                        <a class="modal-trigger" href="#photo_flexer">View More...</a>
+                    </p>
+                    <a class="btn-large waves-effect waves-light blue darken-4">
+                        <i class="material-icons right">check_circle</i>Register Now</a>
+                </div>
+            </div>
+            <div class="col m4 s12">
+                <div class="icon-block">
+                    <h2 class="center deep-purple-text"><i class="material-icons">explore</i></h2>
+                    <h5 class="center">Amazing Race</h5>
+                    <p class="light">We have 4 technical events in our convention which focuses on creativity and design patterns and algorthm.
+                        <br>
+                        <a class="modal-trigger" href="#amazing_race">View More...</a>
+                    </p>
+                    <a class="btn-large waves-effect waves-light blue darken-4">
+                        <i class="material-icons right">check_circle</i>Register Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m4 s12">
+                <div class="icon-block">
+                    <h2 class="center deep-purple-text"><i class="material-icons">question_answer</i></h2>
+                    <h5 class="center">Panel Discussion</h5>
+                    <p class="light">We have 4 technical events in our convention which focuses on creativity and design patterns and algorthm.
+                        <br>
+                        <a class="modal-trigger" href="#panel_discussion">View More...</a>
+                    </p>
+                    <a class="btn-large waves-effect waves-light blue darken-4">
+                        <i class="material-icons right">check_circle</i>Register Now</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<div id="technical" class="modal modal-fixed-footer">
+<!-- modals -->
+<div id="paper_presentation" class="modal modal-fixed-footer">
     <div class="modal-content">
-        <h5>Technical Events</h5>
-        <ul class="collapsible popout" data-collapsible="accordion">
-            <li>
-                <div class="collapsible-header active">
-                    <h2 class="deep-purple-text"><i class="material-icons">assignment</i></h2> Paper Presentation
-                </div>
-                <div class="collapsible-body">
-                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
-                        <br>
-                        <br>
-                        <a href="#!" class="btn-large waves-effect waves-light blue darken-4">
-                            <i class="material-icons right">check_circle</i>Register Now
-                        </a>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="collapsible-header">
-                    <h2 class="deep-purple-text"><i class="material-icons">web</i></h2> Hackathon
-                </div>
-                <div class="collapsible-body">
-                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
-                        <br>
-                        <br>
-                        <a href="#!" class="btn-large waves-effect waves-light blue darken-4">
-                            <i class="material-icons right">check_circle</i>Register Now
-                        </a>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="collapsible-header">
-                    <h2 class="deep-purple-text"><i class="material-icons">android</i></h2> Game of Codes
-                </div>
-                <div class="collapsible-body">
-                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
-                        <br>
-                        <br>
-                        <a href="#!" class="btn-large waves-effect waves-light blue darken-4">
-                            <i class="material-icons right">check_circle</i>Register Now
-                        </a>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="collapsible-header">
-                    <h2 class="deep-purple-text"><i class="material-icons">donut_large</i></h2> Blind Coding
-                </div>
-                <div class="collapsible-body">
-                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
-                        <br>
-                        <br>
-                        <a href="#!" class="btn-large waves-effect waves-light blue darken-4">
-                            <i class="material-icons right">check_circle</i>Register Now
-                        </a>
-                    </p>
-                </div>
-            </li>
-        </ul>
+        <h4>Paper Presentation</h4>
+        <p>A bunch of text</p>
     </div>
     <div class="modal-footer">
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
     </div>
 </div>
-<div id="fun" class="modal modal-fixed-footer">
+<div id="hackathon" class="modal modal-fixed-footer">
     <div class="modal-content">
-        <h5>Fun</h5>
-        <ul class="collapsible popout" data-collapsible="accordion">
-            <li>
-                <div class="collapsible-header active">
-                    <h2 class="deep-purple-text"><i class="material-icons">closed_caption</i></h2> Photo Flexer
-                </div>
-                <div class="collapsible-body">
-                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
-                        <br>
-                        <br>
-                        <a href="#!" class="btn-large waves-effect waves-light blue darken-4">
-                            <i class="material-icons right">check_circle</i>Register Now
-                        </a>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="collapsible-header">
-                    <h2 class="deep-purple-text"><i class="material-icons">explore</i></h2> Amazing Race
-                </div>
-                <div class="collapsible-body">
-                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
-                        <br>
-                        <br>
-                        <a href="#!" class="btn-large waves-effect waves-light blue darken-4">
-                            <i class="material-icons right">check_circle</i>Register Now
-                        </a>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="collapsible-header active">
-                    <h2 class="deep-purple-text"><i class="material-icons">question_answer</i></h2> Panel Discussion
-                </div>
-                <div class="collapsible-body">
-                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
-                        <br>
-                        <br>
-                        <a href="#!" class="btn-large waves-effect waves-light blue darken-4">
-                            <i class="material-icons right">check_circle</i>Register Now
-                        </a>
-                    </p>
-                </div>
-            </li>
-        </ul>
+        <h4>Hackathon</h4>
+        <p>A bunch of text</p>
     </div>
     <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Close</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
     </div>
 </div>
+<div id="game_of_codes" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>Game of Codes</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+</div>
+<div id="blind_coding" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>Blind Coding</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+</div>
+<div id="photo_flexer" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>Photo Flexer</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+</div>
+<div id="amazing_race" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>Amazing Race</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+</div>
+<div id="panel_discussion" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>Panel Discussion</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+</div>
+<!-- end modals -->
 <div id="about" class="section scrollspy"></div>
 <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
